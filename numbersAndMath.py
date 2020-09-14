@@ -1,6 +1,36 @@
 ## Source: Python the Hardway by Zed A. Shaw
 ## Date: 09-13-2020
 
+import math
+import random
+
+
+
+w = 34e5
+x = 3.3
+y = 4
+z = 5j
+
+print(f"The number 34e5 is type: ", type(w))
+print(f"The number 3.3 is type: ", type(x))
+print(f"The number {4} is type: ", type(y))
+print(f"The number 5j is type: ", type(5j))
+
+print(type(complex(y)))
+print(type(float(y)))
+print(type(int(w)))
+
+################################# SOME METHODS IMPORTED FROM THE MATH MODULE ############################
+
+print(math.ceil(x))
+print(math.gcd(math.ceil(x),y))
+
+
+##################################### IMPORTED FROM RANDOM MODULE ############################
+
+print(random.randrange(1,100))
+
+
 #This prints a string to the console
 print("I will now count my chickens: ") 
 
@@ -97,3 +127,4 @@ yearsInvested = eval(input("How many years will you be investing?: "))
 
 #this needs an f-string
 print(f"You're expected return on {principalAmount} at {interestPaid} compounding {annualCompoundingFrequency} annually for {yearsInvested} is: ", principalAmount*((1 + (interestRate/annualCompoundingFrequency))**(annualCompoundingFrequency*yearsInvested)))
+
