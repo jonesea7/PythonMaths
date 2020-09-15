@@ -1,10 +1,16 @@
+conda deactivate
 ## Source: Python the Hardway by Zed A. Shaw
 ## Date: 09-13-2020
 
 import math
 import random
+from statistics import mean
+from decimal import *
+from fractions import Fraction
 
+############################# IMPORTED FROM DECIMAL ###########################################
 
+print(f"The decimal version of 7: ", Decimal('7'))
 
 w = 34e5
 x = 3.3
@@ -29,6 +35,13 @@ print(math.gcd(math.ceil(x),y))
 ##################################### IMPORTED FROM RANDOM MODULE ############################
 
 print(random.randrange(1,100))
+
+
+######################################## IMPORTED FROM STATISTICS ###############################
+
+practiceArray = [1,2,4,2,1]
+print(f"The mean of {practiceArray} is: ", mean(practiceArray))
+
 
 
 #This prints a string to the console
@@ -125,6 +138,58 @@ annualCompoundingFrequency = eval(input("What is your annual compounding frequen
 #assign number to the compoundfrequency variable based on the result 
 yearsInvested = eval(input("How many years will you be investing?: "))
 
+#establish the length of the decimal point displayed
+getcontext().prec = 2
+
 #this needs an f-string
 print(f"You're expected return on {principalAmount} at {interestPaid} compounding {annualCompoundingFrequency} annually for {yearsInvested} is: ", principalAmount*((1 + (interestRate/annualCompoundingFrequency))**(annualCompoundingFrequency*yearsInvested)))
 
+####### PIZZA CALCULATOR #########
+
+# You are ordering one or more pizzas. The sales tax is 8%
+
+#Set input containers
+    #Number of pizzas
+    #Price of pizza
+    #sale tax
+    #final order price
+
+#ask for the number of pizzas
+#assume the cost is the same for all pizzas $12
+#multiply the number of pizzas by the cost
+#multiply that number by 0.08
+#return the new total cost with sales tax
+
+#Ask the user if what size pizza (this will determine the cost)
+#add the cost of the pizza to price
+#Ask if they want another pizza (y/n)
+#
+
+
+
+#place the $15,000 inside a container called money_invested
+money_invested = 15000
+
+#place the 5 percent interest rate into a container called interest_rate
+interest_rate = 0.05
+
+#place the number of times the pricipal is compounding into 
+    #container called annual_compounding_frequency
+annual_compounding_frequency = 12
+
+#place 10 inside a container marked years_invested
+years_invested = 10
+
+#dust off your algebra book 
+    #this thing is heavier than I remember
+
+#find the formula for compound interest
+    # Total =  P(1+r/n)^(nt)  
+
+#place all the pieces (money_invested, interest_rate, etc.) inside the compound interest formula 
+    # and place the result of a container called investment_with_compounded_interest
+investment_with_compounded_interest = (money_invested
+                                        * (1 + interest_rate/annual_compounding_frequency)
+                                        **(interest_rate * years_invested))
+
+#share the result
