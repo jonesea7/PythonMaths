@@ -189,7 +189,7 @@ years_invested = 10
 #place all the pieces (money_invested, interest_rate, etc.) inside the compound interest formula 
     # and place the result of a container called investment_with_compounded_interest
 investment_with_compounded_interest = (money_invested
-                                        * (1 + interest_rate/annual_compounding_frequency)
-                                        **(interest_rate * years_invested))
+                                        * ((1 + (interest_rate/annual_compounding_frequency))
+                                        **(interest_rate * years_invested)))
 
 #share the result
